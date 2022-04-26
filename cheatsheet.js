@@ -84,3 +84,114 @@ for (let index = 0; index < arr.length; index++) {
 for (const item of arr) {
     console.log(item)
 }
+
+/* 
+block comment shortcut: shift + alt + a
+line comment shortcut: ctrl + k + c
+*/
+
+
+/*  Find the smallest integer */
+
+class SmallestIntegerFinder {
+    findSmallestInt(args) {
+      // save our first number someway
+      // let firstNumber = args[0]
+      let smallestNumber = args[0]
+      // compare it with the next one - for loop
+      for(let i = 0; i < args.length; i++){
+        // we are using ; instead of , when we use for loop, i++ means i = i + 1
+        let currentNumber = args[i]
+        // if the currentNumber is smaller, we have to update the value of smallestNumber with the value of the currentNumber
+        if(currentNumber < smallestNumber){
+          smallestNumber = currentNumber
+        }
+      }
+      return smallestNumber // always return outside the for loop, otherwise it ends the loop
+    }
+
+    if (condition) {
+        
+    } else {
+        
+    }
+
+    /*Remove first and last characters of all string*/
+
+    function removeChar(str){
+        let result = "";
+        
+        for (let i = 0; i < str.length; i++){
+          if(i === 0){
+            continue;
+          };
+          if(i === str.length - 1){
+            break;
+          };
+          result += str[i]
+        };
+        return result;
+      };
+
+    /*Simplifying*/
+
+    function removeChar(str){
+        let result = "";
+        
+        for (let i = 0; i < str.length; i++){
+          if(i === 0 || i === str.length - 1){
+            /* || boolean operator - or */
+            continue;
+          };
+          result += str[i]
+        };
+        return result;
+      };
+
+      /* String method */
+
+      function removeChar(str){
+        let result = str.slice(1, str.length - 1)
+        return result
+      };
+
+      /* arrow function */
+
+      const removeChar = str => str.slice(1, str.length - 1);
+
+      /* this arrow function is a short for: */
+
+      function removeChar(str){
+        return str.slice(1, str.length - 1)
+      }
+
+      /* String repeat */
+      /* repeat method */
+
+      function repeatStr (n, s) {
+        return s.repeat(n);
+      }
+
+      /* for loop */
+
+      function repeatStr (n, s) {
+        let result = "";
+        
+        for (let i = 0; i < n; i++) {
+          result += s;
+        }
+        return result
+      }
+
+      /* A wolf in sheep's clothing */
+
+      function warnTheSheep(queue) {
+        let iWolf = queue.indexOf("wolf")
+        let iSheep = queue.length - iWolf -1
+        
+        if (iWolf === queue.length - 1) {
+          return "Pls go away and stop eating my sheep"
+        } else {
+          return `Oi! Sheep number ${iSheep}! You are about to be eaten by a wolf!`
+        }
+      };
