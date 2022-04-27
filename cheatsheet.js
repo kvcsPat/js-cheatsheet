@@ -195,3 +195,5 @@ class SmallestIntegerFinder {
           return `Oi! Sheep number ${iSheep}! You are about to be eaten by a wolf!`
         }
       };
+
+      // a?b:c - if-else-hez hasonló működés
