@@ -172,7 +172,7 @@ class SmallestIntegerFinder {
         return s.repeat(n);
       }
 
-      /* for loop */
+/* for loop */
 
       function repeatStr (n, s) {
         let result = "";
@@ -183,7 +183,7 @@ class SmallestIntegerFinder {
         return result
       }
 
-      /* A wolf in sheep's clothing */
+/* A wolf in sheep's clothing */
 
       function warnTheSheep(queue) {
         let iWolf = queue.indexOf("wolf")
@@ -196,4 +196,30 @@ class SmallestIntegerFinder {
         }
       };
 
-      // a?b:c - if-else-hez hasonló működés
+// a?b:c - if-else-hez hasonló működés
+
+/* My head is at the wrong end! */
+
+function fixTheMeerkat(arr) {
+  [arr[0], arr[arr.length - 1]] = [arr[arr.length - 1], arr[0]];
+  return arr
+}
+
+function fixTheMeerkat(arr) {
+  let result = arr.reverse();
+  return result
+}
+
+function fixTheMeerkat(arr) {
+  let correctOrder = [];
+  
+  for (let i = 0; i < arr.length; i++) {
+    if (i === 0) {
+      correctOrder[2] = arr[i]
+    } else if (i === 2) {
+      correctOrder[0] = arr[i]
+    }
+  correctOrder[1] = arr[1];
+  }
+  return correctOrder
+}
