@@ -223,3 +223,26 @@ function fixTheMeerkat(arr) {
   }
   return correctOrder
 }
+
+
+function maxMultiple(divisor, bound){
+	let max = 0;
+
+	for (i = bound; i > 0; i--) {
+	  if (i % divisor === 0) {
+		max = i;
+	  }
+	}
+	return max;
+  }
+
+  function maxMultiple(divisor, bound){
+	let max = 0;
+	
+	for (i = divisor; i <= bound; i++) {
+	  if ( i % divisor === 0) {
+		max = i
+	  }
+	}
+	return max
+  }
