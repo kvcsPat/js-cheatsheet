@@ -80,6 +80,8 @@ ha valami mögött pont van, az object
 
 mindig console.log()
 
+.isArray() method, ha true az érték akkor array-el van dolgunk
+
 stringgé alakítások: "" + 1, `${1}`, 1.toString(), String(1)
 
 for cikluson kívül legyen a return (ha nem akarjuk, hogy az első elem után leálljon a ciklus)
